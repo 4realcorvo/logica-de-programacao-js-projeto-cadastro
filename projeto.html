@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo.css">
+  <title>Cadastro Final</title>
+</head>
+<body>
+  <main>
+    <h1>Cadastro Final</h1>
+    <hr>
+
+    <form action="#">
+      <div>
+        <label for="codigo">Código:</label>
+        <input type="text" id="codigo" placeholder="XXX0000">
+      </div>
+
+      <div>
+        <label for="produto">Produto:</label>
+        <input type="text" id="produto">
+      </div>
+
+      <div>
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" placeholder="000">
+      </div>
+    
+      <div>
+        <label for="preco">Preço Unitário:</label>
+        <input type="number" id="preco" placeholder="0.00">
+      </div>
+
+      <button onclick="acrescentarDado()">Cadastar</button>
+    </form>
+    <hr>
+
+    <table id="table">
+      <tr>
+        <th>Código</th>
+        <th>Produto</th>
+        <th >Quantidade</th>
+        <th>Preço</th>
+        <th>Total</th>
+      </tr>
+      <tr id="valores">
+      </tr>
+    </table>
+
+  </main>
+
+  <script src="logica.js"></script>
+</body>
+</html>
