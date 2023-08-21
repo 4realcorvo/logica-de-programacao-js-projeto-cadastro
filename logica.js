@@ -2,20 +2,27 @@ const acrescentarDado = function() {
   //Entrada de Dados
   const codigo = document.querySelector('#codigo').value;
   const produto = document.querySelector('#produto').value;
-  const quantidade = document.querySelector('#quantidade').value;
-  const precoUnitario = document.querySelector('#preco').value;
+  const quantidade = Number(document.querySelector('#quantidade').value);
+  const precoUnitario = Number(document.querySelector('#preco').value);
   const total = precoUnitario*quantidade;
+
+  //Procesamento
+  //Tabela
   const elemento = document.getElementById('table');
   const novoElemento = document.createElement('tr');
 
-  //Procesamento
   novoElemento.innerHTML = `<td id="tabela-codigo">${codigo}</td>
   <td>${produto}</td>
   <td>${quantidade}</td>
   <td>${precoUnitario}</td>
   <td>${total}</td>`
+  elemento.appendChild(novoElemento);
 
   //Saída
-  elemento.appendChild(novoElemento);
+  const saidaDados = Array.from(document.querySelectorAll('input'));
+  saidaDados.map((input) => {
+    input.value = '';
+    return input;
+  }).shift().focus();
 };
 

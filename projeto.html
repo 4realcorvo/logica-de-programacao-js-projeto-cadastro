@@ -24,12 +24,12 @@
 
       <div>
         <label for="quantidade">Quantidade:</label>
-        <input type="number" id="quantidade" placeholder="000">
+        <input type="text" id="quantidade" placeholder="000">
       </div>
     
       <div>
         <label for="preco">Preço Unitário:</label>
-        <input type="number" id="preco" placeholder="0.00">
+        <input type="text" id="preco" placeholder="0.00">
       </div>
 
       <button onclick="acrescentarDado()">Cadastar</button>
@@ -37,15 +37,19 @@
     <hr>
 
     <table id="table">
-      <tr>
-        <th>Código</th>
-        <th>Produto</th>
-        <th >Quantidade</th>
-        <th>Preço</th>
-        <th>Total</th>
-      </tr>
-      <tr id="valores">
-      </tr>
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Produto</th>
+          <th >Quantidade</th>
+          <th>Preço</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="valores">
+        <tr>
+        </tr>
+      </tbody>
     </table>
 
   </main>
